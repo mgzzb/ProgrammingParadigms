@@ -1,4 +1,4 @@
-# ProgrammingParadigms
+# Programming Paradigms
 
 Homeworks and Activities for my Programming Paradigms class. 
 

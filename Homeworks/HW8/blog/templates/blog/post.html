@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>{{ post.title}} </title>
+    </head>
+    <body>
+        <h1>{{post.title}}</h1>
+
+        <p2> <b>Author:</b> <i font-style="italic" >{{post.author_name}}</i> </p2>
+        <p> <b>Published:</b> ({{post.pub_date}})</p>
+        {{post.content|linebreaks}}
+
+        <br>
+        
+        <button onclick = "location.href='/blog';"> Go back to homepage </button>
+
+	 </body>
+</html>

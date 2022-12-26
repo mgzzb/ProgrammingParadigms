@@ -1,0 +1,10 @@
+Explain why when the CoffeeScript code snippet shown in the first column is executed it has the output shown in the second column.
+
+The CoffeeScript code works in print1() and not in print2() because of how the functions are using the arrows. The arrows -> and => have different meanings. With print2() the innerFN is using "->" which is what is causing the type error. We need to change the arrow in the print2: () innerFn to be "=>" in order for the function to work properly. Once we make the change we will avoid the single arrow "->" to try to takeover the value of "this" or "@" in the context of the function. 
+
+Below is the code from the print function fixed:
+
+print2: () =>
+        console.log "print2 = (#{@x},#{@y})"
+        innerFn = () => (console.log "inner in print2 = (#{@x},#{@y})" ) 
+        innerFn()

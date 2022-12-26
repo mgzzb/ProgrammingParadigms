@@ -1,0 +1,11 @@
+Explain the difference between <script>, <script async> and <script defer>.
+
+<script> is used to embed executable code or data. This means that this HTML element is used to refer to a code. <script> can embed a code written in languages like JavaScript (the most common), WebGL's GLSL shader programming language and JSON.
+
+A <script> tag will fetch and execute immediately, before the browser continues to parse the page. This means the user can not interact with the page until all the scripts are downloaded and executed before the page can be parsed.
+
+<script async> is a tag used to asynchronously execute scripts, this will occurs as soon as they have been fetched. When this tag is called, it downloads the script, the document parser is paused for a moment while the script is executed, and then the document parser continues to run.
+
+<script defer> is a tag that is used to allow the execution of the script only after the entire document has been parsed. Therefore, it will fetch all the data necessary and after parsing through the document will execute the scripts.
+
+We should note that <script async> and <script defer> have no effect on inline scripts.
